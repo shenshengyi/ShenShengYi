@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
       <Extensions>qrc;*</Extensions>
@@ -26,11 +22,13 @@
     <Filter Include="UI">
       <UniqueIdentifier>{2ad8c99b-ba16-4c53-994d-587c7a68521c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\UI\MainWindow.cpp">
       <Filter>UI</Filter>
     </ClCompile>
@@ -40,21 +38,24 @@
     <ClCompile Include="src\UI\ClassTree.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="src\UI\TreeItem.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UI\TreeItem.cpp">
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\CentralWidget.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\StudentInfromationTable.cpp">
       <Filter>UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ui\MainWindow.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="ui\TabWidget.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="ui\ClassTree.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -68,13 +69,19 @@
     <QtMoc Include="src\UI\ClassTree.h">
       <Filter>UI</Filter>
     </QtMoc>
+    <QtMoc Include="src\UI\CentralWidget.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="src\UI\StudentInfromationTable.h">
+      <Filter>UI</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\UI\TreeItem.h">
       <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

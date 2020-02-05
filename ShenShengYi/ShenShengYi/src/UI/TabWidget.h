@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QWidget>
-#include "ui_TabWidget.h"
 #include <vector>
 
 namespace SSY
@@ -21,6 +20,5 @@ namespace SSY
 		void Init(void);
 
 		std::vector<ClassTree*> _veClassTree;
-		Ui::TabWidget ui;
 	};
 }

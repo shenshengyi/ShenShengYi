@@ -8,6 +8,7 @@ namespace SSY
 	{
 	public:
 		TreeItem(QTreeWidgetItem* parent, const QString& strings, int type = Type);
+		TreeItem(QTreeWidget* treeview, const QStringList& strings, int type = Type);
 		virtual ~TreeItem() {}
 		virtual void DisplayInformation(void);
 	};
@@ -24,5 +25,8 @@ namespace SSY
 	public:
 		StudentTreeItem(QTreeWidgetItem* parent, const QString& strings, int type = Type);
 		void DisplayInformation(void)override;
+		void SetNum(int num) { _Num = num; }
+	private:
+		int _Num;
 	};
 }

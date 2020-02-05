@@ -103,8 +103,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\UI\CentralWidget.cpp" />
     <ClCompile Include="src\UI\ClassTree.cpp" />
     <ClCompile Include="src\UI\MainWindow.cpp" />
+    <ClCompile Include="src\UI\StudentInfromationTable.cpp" />
     <ClCompile Include="src\UI\TabWidget.cpp" />
     <ClCompile Include="src\UI\TreeItem.cpp" />
   </ItemGroup>
@@ -114,12 +116,12 @@
     <QtMoc Include="src\UI\MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="ui\ClassTree.ui" />
     <QtUic Include="ui\MainWindow.ui" />
-    <QtUic Include="ui\TabWidget.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\stdafx.h" />
+    <QtMoc Include="src\UI\CentralWidget.h" />
+    <QtMoc Include="src\UI\StudentInfromationTable.h" />
     <ClInclude Include="src\UI\TreeItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

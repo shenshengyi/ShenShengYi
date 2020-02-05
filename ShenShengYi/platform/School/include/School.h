@@ -29,14 +29,17 @@ namespace STU
 			m = x;
 		}
 		int test(void)const { return m; }
-		void AddStudent(void);
+		void AddStudent(bool isSort = true);
 		int GetStudentNum(void)const;
 		int GetClassNumber(void)const;
 		Student** StudentIteratorBegin(void);
 		Student** StudentIteratorEnd(void);
 		Student*const* StudentIteratorBegin(void)const;
 		Student* const* StudentIteratorEnd(void)const;
+		Student* FindStudentByNum(int Num)const;
+		folly::fbvector<Student*> FindStudentByClassNum(int classNum)const;
 	private:
+		void SortByStudentToScore(void);
 		void init(void);
 		void AddStudentInformation(void);
 		void AddStudentName(void);

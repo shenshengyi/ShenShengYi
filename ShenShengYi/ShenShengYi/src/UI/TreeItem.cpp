@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "TreeItem.h"
-
+#include "CentralWidget.h"
+#include "qmessagebox.h"
 namespace SSY
 {
 	TreeItem::TreeItem(QTreeWidgetItem* parent, const QString& strings, int type)
@@ -8,8 +9,13 @@ namespace SSY
 	{
 	}
 
-	void TreeItem::DisplayInformation(void) {
+	TreeItem::TreeItem(QTreeWidget* treeview, const QStringList& strings, int type)
+		: QTreeWidgetItem(treeview, strings,type)
+	{
+	}
 
+	void TreeItem::DisplayInformation(void) {
+		CentralWidget::GetInstance()->UpdateTableWidgetData();
 	}
 
 	//////////////////////////////////////////////////////
@@ -20,7 +26,7 @@ namespace SSY
 	}
 
 	void ClassTreeItem::DisplayInformation(void) {
-		QMessageBox::information(nullptr, "°à¼¶", text(0));
+		CentralWidget::GetInstance()->UpdateTableWidgetData(text(0));
 	}
 
 	//////////////////////////////////////////////////////
@@ -31,6 +37,6 @@ namespace SSY
 	}
 
 	void StudentTreeItem::DisplayInformation(void) {
-		QMessageBox::information(nullptr, "Ñ§Éú", text(0));
+		CentralWidget::GetInstance()->UpdateTableWidgetData(_Num);
 	}
 }

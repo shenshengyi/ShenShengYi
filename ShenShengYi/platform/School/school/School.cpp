@@ -6,6 +6,7 @@
 #include "GenerateScore.h"
 #include "Configuration.h"
 #include "GenerateNum.h"
+#include <algorithm>
 
 namespace STU
 {
@@ -42,9 +43,13 @@ namespace STU
 		}
 	}
 
-	void School::AddStudent(void) {
+	void School::AddStudent(bool isSort) {
 		AddStudentName();
 		AddStudentInformation();
+
+		if (isSort) {
+			SortByStudentToScore();
+		}
 	}
 
 	void School::AddStudentName(void) {
@@ -66,6 +71,7 @@ namespace STU
 
 			information.SetLanguage(generate->GenerateLanguage());
 			information.SetMath(generate->GenerateMath());
+			information.SetComprehensive(generate->GenerateComprehensive());
 			information.SetEnglish(generate->GenerateEnglish());
 			student->SetStudentInformation(information);
 		}
@@ -111,5 +117,36 @@ namespace STU
 			return generateNum->GenerateClassNum();
 		}
 		return 0;
+	}
+
+	Student* School::FindStudentByNum(int Num)const {
+		for (auto student : _StudentList) {
+			if (student->GetStudentInformation().GetNum() == Num) {
+				return student;
+			}
+		}
+		return nullptr;
+	}
+
+	namespace {
+		auto compare = [=](Student* left, Student* right)->bool {
+			return left->GetStudentInformation().GetTotalScore() > right->GetStudentInformation().GetTotalScore();
+		};
+	}
+
+	folly::fbvector<Student*> School::FindStudentByClassNum(int classNum)const {
+		folly::fbvector<Student*> result;
+		for (auto student : _StudentList) {
+			if (student->GetStudentInformation().GetClassNum() == classNum) {
+				result.emplace_back(student);
+			}
+		}
+
+		std::sort(result.begin(), result.end(), compare);
+		return result;
+	}
+
+	void School::SortByStudentToScore(void) {
+		std::sort(_StudentList.begin(), _StudentList.end(), compare);
 	}
 }

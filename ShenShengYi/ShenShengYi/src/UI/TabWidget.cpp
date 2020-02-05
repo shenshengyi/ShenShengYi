@@ -8,8 +8,6 @@ namespace SSY
 	TabWidget::TabWidget(QWidget* parent)
 		: QTabWidget(parent)
 	{
-		ui.setupUi(this);
-
 		Init();
 	}
 

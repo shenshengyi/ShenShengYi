@@ -12,7 +12,6 @@ namespace SSY
 		: QTreeWidget(parent)
 		, _classType{tr("全部班级")}
 	{
-		ui.setupUi(this);
 		Init();
 	}
 
@@ -30,7 +29,7 @@ namespace SSY
 	}
 
 	void ClassTree::UpdateData(void) {
-		QTreeWidgetItem* root = new QTreeWidgetItem(this, QStringList() << "全部班级");
+		TreeItem* root = new TreeItem(this, QStringList() << "全部班级");
 		root->setExpanded(true);
 
 		STU::Student* const* studentBegin = STU::School::GetInstance()->StudentIteratorBegin();
@@ -48,7 +47,8 @@ namespace SSY
 			STU::StudentInformation information = (*studentBegin)->GetStudentInformation();
 			std::string name = information.GetName();
 			int classNum = information.GetClassNum();
-			new StudentTreeItem(classMap[classNum], QString::fromLocal8Bit(name.c_str()));
+			StudentTreeItem*studentItem = new StudentTreeItem(classMap[classNum], QString::fromLocal8Bit(name.c_str()));
+			studentItem->SetNum(information.GetNum());
 			studentBegin++;
 		}		
 	}

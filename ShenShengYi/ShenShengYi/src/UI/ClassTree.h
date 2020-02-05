@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QWidget>
-#include "ui_ClassTree.h"
 
 namespace SSY
 {
@@ -22,7 +21,6 @@ namespace SSY
 		void Init(void);
 
 		const QString _classType;
-		Ui::ClassTree ui;
 	};
 
 	class ArtsClassTree :public ClassTree

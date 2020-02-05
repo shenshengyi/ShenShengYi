@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'TreeItem.h'
+** Meta object code from reading C++ file 'StudentInfromationTable.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.14.0)
 **
@@ -8,11 +8,11 @@
 
 #include <memory>
 #include "../../../../src/stdafx.h"
-#include "../../../../../src/UI/TreeItem.h"
+#include "../../../../../src/UI/StudentInfromationTable.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'TreeItem.h' doesn't include <QObject>."
+#error "The header file 'StudentInfromationTable.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.14.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -22,25 +22,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SSY__TreeItem_t {
+struct qt_meta_stringdata_SSY__StudentInfromationTable_t {
     QByteArrayData data[1];
-    char stringdata0[14];
+    char stringdata0[29];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SSY__TreeItem_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_SSY__StudentInfromationTable_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SSY__TreeItem_t qt_meta_stringdata_SSY__TreeItem = {
+static const qt_meta_stringdata_SSY__StudentInfromationTable_t qt_meta_stringdata_SSY__StudentInfromationTable = {
     {
-QT_MOC_LITERAL(0, 0, 13) // "SSY::TreeItem"
+QT_MOC_LITERAL(0, 0, 28) // "SSY::StudentInfromationTable"
 
     },
-    "SSY::TreeItem"
+    "SSY::StudentInfromationTable"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SSY__TreeItem[] = {
+static const uint qt_meta_data_SSY__StudentInfromationTable[] = {
 
  // content:
        8,       // revision
@@ -56,7 +56,7 @@ static const uint qt_meta_data_SSY__TreeItem[] = {
        0        // eod
 };
 
-void SSY::TreeItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void SSY::StudentInfromationTable::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -64,32 +64,32 @@ void SSY::TreeItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject SSY::TreeItem::staticMetaObject = { {
-    QMetaObject::SuperData::link<QTreeWidgetItem::staticMetaObject>(),
-    qt_meta_stringdata_SSY__TreeItem.data,
-    qt_meta_data_SSY__TreeItem,
+QT_INIT_METAOBJECT const QMetaObject SSY::StudentInfromationTable::staticMetaObject = { {
+    QMetaObject::SuperData::link<QTableWidget::staticMetaObject>(),
+    qt_meta_stringdata_SSY__StudentInfromationTable.data,
+    qt_meta_data_SSY__StudentInfromationTable,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SSY::TreeItem::metaObject() const
+const QMetaObject *SSY::StudentInfromationTable::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SSY::TreeItem::qt_metacast(const char *_clname)
+void *SSY::StudentInfromationTable::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SSY__TreeItem.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_SSY__StudentInfromationTable.stringdata0))
         return static_cast<void*>(this);
-    return QTreeWidgetItem::qt_metacast(_clname);
+    return QTableWidget::qt_metacast(_clname);
 }
 
-int SSY::TreeItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int SSY::StudentInfromationTable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QTreeWidgetItem::qt_metacall(_c, _id, _a);
+    _id = QTableWidget::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

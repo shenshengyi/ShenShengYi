@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MainWindow.h"
 #include "TabWidget.h"
+#include "CentralWidget.h"
 #include <School.h>
 
 namespace SSY
@@ -39,7 +40,7 @@ namespace SSY
 		addDockWidget(Qt::RightDockWidgetArea, dockProperty);
 
 		
-		QSplitter* spliter = new QSplitter(Qt::Vertical);
+		//QSplitter* spliter = new QSplitter(Qt::Vertical);
 		QTabWidget* left = new QTabWidget;
 		left->addTab(new QListWidget, "河北1");
 		left->addTab(new QListWidget, "河北2");
@@ -47,13 +48,13 @@ namespace SSY
 		left->addTab(new QListWidget, "河北4");
 		left->addTab(new QListWidget, "河北5");
 		left->setTabPosition(QTabWidget::North);
-		QTextEdit* right = new QTextEdit(tr("右窗口"));
-		spliter->addWidget(left);
-		spliter->addWidget(right);
-		spliter->setStretchFactor(0, 2);
-		spliter->setStretchFactor(1, 1);
-		spliter->setWindowTitle(tr("你好"));
-		this->setCentralWidget(left);
+		//QTextEdit* right = new QTextEdit(tr("右窗口"));
+		//spliter->addWidget(left);
+		//spliter->addWidget(right);
+		//spliter->setStretchFactor(0, 2);
+		//spliter->setStretchFactor(1, 1);
+		//spliter->setWindowTitle(tr("你好"));
+		this->setCentralWidget(CentralWidget::GetInstance());
 		//this->setCentralWidget(pWidget);
 		//_MdiArea = new QMdiArea;
 		//this->setCentralWidget(_MdiArea);

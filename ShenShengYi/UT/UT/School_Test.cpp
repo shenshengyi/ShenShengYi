@@ -26,14 +26,18 @@ int add1(int a, int b) {
 TEST_F(School_Test, GetStudentNum) {
 	_shool->AddStudent();
 	int num = _shool->GetStudentNum();
-	STU::Student** studentBegin = _shool->StudentIteratorBegin();
-	STU::Student** studentEnd = _shool->StudentIteratorEnd();
-	int i = 0;
-	while (studentBegin != studentEnd) {
-		if (nullptr != studentBegin) {
-			cout << (*studentBegin)->GetStudentInformation().GetName() << "  " << (*studentBegin)->GetStudentInformation().GetClassNum() << endl;
-		}
-		studentBegin++;
-		i++;
+	auto result = _shool->FindStudentByClassNum(5);
+	for (auto student : result) {
+		cout << student->GetStudentInformation().GetClassNum() << endl;
 	}
+	//STU::Student** studentBegin = _shool->StudentIteratorBegin();
+	//STU::Student** studentEnd = _shool->StudentIteratorEnd();
+	//int i = 0;
+	//while (studentBegin != studentEnd) {
+	//	if (nullptr != studentBegin) {
+	//		cout << (*studentBegin)->GetStudentInformation().GetName() << "  " << (*studentBegin)->GetStudentInformation().GetClassNum() << endl;
+	//	}
+	//	studentBegin++;
+	//	i++;
+	//}
 }
