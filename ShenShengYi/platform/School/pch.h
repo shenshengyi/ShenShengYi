@@ -9,9 +9,12 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-
+#define GLOG_NO_ABBREVIATED_SEVERITIES
+#include <glog/logging.h>
 #undef max
 #undef min
 #include <folly/FBVector.h>
 #include <folly/String.h>
+
+
 #endif //PCH_H

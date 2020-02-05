@@ -23,9 +23,10 @@ int main(int argc, char *argv[])
  //   palette.setColor(QPalette::Highlight, QColor(142, 45, 197).lighter());
  //   palette.setColor(QPalette::HighlightedText, Qt::black);
  //   a.setPalette(palette);
-    STU::School sch;
-    int result = sch.test();
-    QMessageBox::information(nullptr, "nihao", QString::number(result));
+    //STU::School* sch = STU::School::GetInstance();
+    //int result = sch->test();
+    //STU::School::Release();
+    //QMessageBox::information(nullptr, "nihao", QString::number(result));
 	SSY::MainWindow w;
 	w.setWindowTitle("««∏Í¿Ô∑Â");
 	w.show();

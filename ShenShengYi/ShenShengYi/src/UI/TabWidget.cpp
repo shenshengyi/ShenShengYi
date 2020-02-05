@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "TabWidget.h"
 #include "ClassTree.h"
+#include "TreeItem.h"
 
 namespace SSY
 {
@@ -24,8 +25,16 @@ namespace SSY
 		_veClassTree.emplace_back(new ScienceClassTree);
 
 		for (auto classTree : _veClassTree) {
+			connect(classTree, &QTreeWidget::itemClicked, this, &TabWidget::ClickedEvent);
 			addTab(classTree, classTree->GetClassName());
 			classTree->UpdateData();
+		}
+	}
+
+	void TabWidget::ClickedEvent(QTreeWidgetItem* item, int column) {
+		if (nullptr != item) {
+			TreeItem* treeItem = dynamic_cast<TreeItem*>(item);
+			treeItem->DisplayInformation();
 		}
 	}
 }

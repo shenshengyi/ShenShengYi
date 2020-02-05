@@ -11,6 +11,6 @@ protected:
     static void TearDownTestCase(void);
     void SetUp()override;
     void TearDown()override;
-    STU::School shool;
+    STU::School* _shool;
 };
 

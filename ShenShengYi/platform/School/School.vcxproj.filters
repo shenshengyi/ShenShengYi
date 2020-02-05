@@ -19,6 +19,15 @@
     <Filter Include="include">
       <UniqueIdentifier>{6c34f6a0-088d-4527-b6e8-ce34bc8fa171}</UniqueIdentifier>
     </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{d299dae9-bbb0-4855-8ef7-911a39d15023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{0ba53f7f-361d-4035-97e2-c4b551d9e30c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generate">
+      <UniqueIdentifier>{41e9c4c0-4cae-4c5c-b0d0-7f050fad7731}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -36,6 +45,27 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Configuration.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="data\FileSource.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DataSource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GenerateScore.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="generate\STLGenerateScore.h">
+      <Filter>generate</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GenerateNum.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="generate\OrdinaryGenerateNum.h">
+      <Filter>generate</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -52,6 +82,27 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="config\Configuration.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="data\FileSource.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\DataSource.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="generate\GenerateScore.cpp">
+      <Filter>generate</Filter>
+    </ClCompile>
+    <ClCompile Include="generate\STLGenerateScore.cpp">
+      <Filter>generate</Filter>
+    </ClCompile>
+    <ClCompile Include="generate\GenerateNum.cpp">
+      <Filter>generate</Filter>
+    </ClCompile>
+    <ClCompile Include="generate\OrdinaryGenerateNum.cpp">
+      <Filter>generate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

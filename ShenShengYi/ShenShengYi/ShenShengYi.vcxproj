@@ -65,7 +65,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>H:\vcpkg2\include;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School\include;.\src\UI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>H:\vcpkg2\include;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School\include;.\src\UI;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -87,7 +87,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>H:\vcpkg2\include;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School\include;.\src\UI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>H:\vcpkg2\include;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School\include;.\src\UI;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,6 +106,7 @@
     <ClCompile Include="src\UI\ClassTree.cpp" />
     <ClCompile Include="src\UI\MainWindow.cpp" />
     <ClCompile Include="src\UI\TabWidget.cpp" />
+    <ClCompile Include="src\UI\TreeItem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\UI\ClassTree.h" />
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\UI\TreeItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

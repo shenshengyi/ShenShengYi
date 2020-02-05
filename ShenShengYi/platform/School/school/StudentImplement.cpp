@@ -17,6 +17,9 @@ namespace STU
 		return _StudentInformation;
 	}
 
+	void StudentImplement::SetStudentInformation(const StudentInformation& information) {
+		_StudentInformation = information;
+	}
 
 	void ArtsStudent::DisplayStudent(void)const {
 		cout << "ÎÄ¿ÆÉú" << endl;

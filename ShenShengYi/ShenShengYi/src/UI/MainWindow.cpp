@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MainWindow.h"
 #include "TabWidget.h"
+#include <School.h>
 
 namespace SSY
 {
@@ -10,10 +11,14 @@ namespace SSY
 	{
 		ui.setupUi(this);
 
+		STU::School::GetInstance()->AddStudent();
+
 		CreateDockWindows();
 		CreateActions();
 		CreateMenus();
 		CreateStatusBar();
+
+		
 	}
 
 	void MainWindow::CreateDockWindows(void) {

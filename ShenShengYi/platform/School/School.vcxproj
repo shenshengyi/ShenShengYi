@@ -92,6 +92,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>H:\vcpkg2\include;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School;H:\ShenShengYi\ShenShengYi\ShenShengYi\platform\School\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -162,14 +163,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="data\FileSource.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="generate\OrdinaryGenerateNum.h" />
+    <ClInclude Include="generate\STLGenerateScore.h" />
+    <ClInclude Include="include\Configuration.h" />
+    <ClInclude Include="include\GenerateNum.h" />
+    <ClInclude Include="include\GenerateScore.h" />
+    <ClInclude Include="include\DataSource.h" />
     <ClInclude Include="include\School.h" />
     <ClInclude Include="include\Student.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="school\StudentImplement.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="config\Configuration.cpp" />
+    <ClCompile Include="data\FileSource.cpp" />
+    <ClCompile Include="data\DataSource.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="generate\GenerateNum.cpp" />
+    <ClCompile Include="generate\GenerateScore.cpp" />
+    <ClCompile Include="generate\OrdinaryGenerateNum.cpp" />
+    <ClCompile Include="generate\STLGenerateScore.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

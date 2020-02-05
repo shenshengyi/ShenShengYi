@@ -15,7 +15,8 @@ namespace SSY
 	public:
 		TabWidget(QWidget* parent = Q_NULLPTR);
 		~TabWidget();
-
+	private slots:
+		void ClickedEvent(QTreeWidgetItem* item, int column);
 	private:
 		void Init(void);
 

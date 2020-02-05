@@ -14,6 +14,10 @@ namespace SSY
 		~ClassTree(void);
 		virtual QString GetClassName(void)const;
 		virtual void UpdateData(void);
+	protected:
+		void contextMenuEvent(QContextMenuEvent*) override;
+	private slots:
+		void ClickEvent(QTreeWidgetItem* item, int column);
 	private:
 		void Init(void);
 

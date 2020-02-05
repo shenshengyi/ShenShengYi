@@ -1,0 +1,4 @@
+Log file created at: 2020/02/04 16:23:08
+Running on machine: SC-201707101948
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0204 16:23:08.154397 12620 School.cpp:58] _StudentList size = 0

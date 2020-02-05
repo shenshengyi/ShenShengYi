@@ -43,6 +43,9 @@
     <ClCompile Include="src\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\UI\TreeItem.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ui\MainWindow.ui">
@@ -69,6 +72,9 @@
   <ItemGroup>
     <ClInclude Include="src\stdafx.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\TreeItem.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

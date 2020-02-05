@@ -9,6 +9,7 @@ namespace STU
 		StudentImplement(void);
 		~StudentImplement(void);
 		StudentInformation GetStudentInformation(void)const override;
+		void SetStudentInformation(const StudentInformation& information)override;
 	protected:
 		StudentInformation	_StudentInformation;
 	};
